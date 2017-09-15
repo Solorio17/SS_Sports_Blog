@@ -1,0 +1,30 @@
+{
+  "name": "ss_sports_blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Solorio17/SS_Sports_Blog.git"
+  },
+  "author": "Jason Solorio Martinez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "mongoose": "*",
+    "express": "*",
+    "connect-flash": "*",
+    "pug": "*",
+    "moment": "*",
+    "express-messages": "*",
+    "express-sessions": "*",
+    "express-validator": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/Solorio17/SS_Sports_Blog/issues"
+  },
+  "homepage": "https://github.com/Solorio17/SS_Sports_Blog#readme"
+}
