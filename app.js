@@ -15,5 +15,5 @@ app.set("view engine", "pug");
 
 
 app.listen(3000, (req, res, next) => {
-  console.log("Started on port..."+port);
+  console.log("Server Started on Port..."+port);
 });
