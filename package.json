@@ -21,7 +21,7 @@
     "pug": "*",
     "moment": "*",
     "express-messages": "*",
-    "express-sessions": "*",
+    "express-session": "*",
     "express-validator": "*"
   },
   "bugs": {
