@@ -2,8 +2,7 @@ const express    = require("express"),
       bodyParser = require("body-parser"),
       path       = require("path"),
       session    = require("express-session"),
-      validator  = require("express-validator"),
-      flash      = require("express-flash");
+      validator  = require("express-validator");
 
 //Setting App and Port
 const app  = express(),
@@ -21,5 +20,12 @@ app.listen(3000, (req, res, next) => {
   console.log("Server Started on Port..."+port);
 });
 
-//Set Static Folder
+//Setting up Static Folder
 app.use(express.static(path.join(__dirname, "public")));
+
+//Express Messages
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+  res.locals.messages = require('express-messages')(req, res);
+  next();
+});
