@@ -20,3 +20,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.listen(3000, (req, res, next) => {
   console.log("Server Started on Port..."+port);
 });
+
+//Set Static Folder
+app.use(express.static(path.join(__dirname, "public")));
