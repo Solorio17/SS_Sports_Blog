@@ -13,6 +13,9 @@ const app  = express(),
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
+//Body Parser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.listen(3000, (req, res, next) => {
   console.log("Server Started on Port..."+port);
