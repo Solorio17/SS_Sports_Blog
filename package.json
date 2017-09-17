@@ -14,15 +14,15 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
-    "nodemon": "*",
-    "mongoose": "*",
-    "express": "*",
     "connect-flash": "*",
-    "pug": "*",
-    "moment": "*",
+    "express": "*",
     "express-messages": "*",
+    "express-sessions": "*",
     "express-validator": "*",
-    "express-sessions": "*"
+    "moment": "*",
+    "mongoose": "*",
+    "nodemon": "*",
+    "pug": "^2.0.0-beta6"
   },
   "bugs": {
     "url": "https://github.com/Solorio17/SS_Sports_Blog/issues"
