@@ -21,8 +21,8 @@
     "pug": "*",
     "moment": "*",
     "express-messages": "*",
-    "express-session": "*",
-    "express-validator": "*"
+    "express-validator": "*",
+    "express-sessions": "*"
   },
   "bugs": {
     "url": "https://github.com/Solorio17/SS_Sports_Blog/issues"
