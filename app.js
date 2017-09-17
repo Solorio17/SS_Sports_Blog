@@ -26,6 +26,24 @@ app.use(function (req, res, next) {
   next();
 });
 
+//Express Validator
+app.use(expressValidator({
+  errorFormatter: (param, msg, value) => {
+    var namespace = param.split(".")
+    , root        = namespace.shift()
+    , formParam   = root;
+
+  while(namespace.length) {
+    formParam += "[" + namespace.shift() + "]";
+  }
+  return {
+    param : formParam,
+    msg   : msg,
+    value : value
+   };
+ }
+}));
+
 app.listen(3000, (req, res, next) => {
   console.log("Server Started on Port..."+port);
 });
