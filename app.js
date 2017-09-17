@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //Express Messages
 app.use(require('connect-flash')());
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   res.locals.messages = require('express-messages')(req, res);
   next();
 });
@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
 //Express Validator
 app.use(expressValidator({
   errorFormatter: (param, msg, value) => {
-    var namespace = param.split(".")
+    const namespace = param.split(".")
     , root        = namespace.shift()
     , formParam   = root;
 
