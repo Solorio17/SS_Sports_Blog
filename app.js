@@ -8,6 +8,11 @@ const express    = require("express"),
 const app  = express(),
       port = 3000;
 
+const index      = require("./routes/index"),
+      articles   = require("./routes/articles"),
+      categories = require("./routes/categories"),
+      manage     = require("./routes/manage");
+
 //Setting up Views
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
@@ -44,10 +49,10 @@ app.use(validator({
  }
 }));
 
-//Route Begin
-app.get("/", (req, res, next) => {
-  res.send("Hello")
-});
+app.use("/", index);
+app.use("/articles", articles);
+app.use("/categories", categories);
+app.use("/manage", manage);
 
 app.listen(port, () => {
   console.log("Server Started on Port..."+port);
