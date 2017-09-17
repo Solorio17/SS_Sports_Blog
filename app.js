@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 });
 
 //Express Validator
-app.use(expressValidator({
+app.use(validator({
   errorFormatter: (param, msg, value) => {
     const namespace = param.split(".")
     , root        = namespace.shift()
@@ -44,6 +44,11 @@ app.use(expressValidator({
  }
 }));
 
-app.listen(3000, (req, res, next) => {
+//Route Begin
+app.get("/", (req, res, next) => {
+  res.send("Hello")
+});
+
+app.listen(port, () => {
   console.log("Server Started on Port..."+port);
 });
