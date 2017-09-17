@@ -1,7 +1,7 @@
 const express    = require("express"),
       bodyParser = require("body-parser"),
       path       = require("path"),
-      session    = require("express-session"),
+      session    = require("express-sessions"),
       validator  = require("express-validator");
 
 //Setting App and Port
