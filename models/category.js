@@ -12,6 +12,12 @@ const categorySchema = mongoose.Schema({
 
 const Category = module.exports = mongoose.model('Category', categorySchema);
 
+//Get Categories
  module.exports.getCategories = (callback, limit) => {
    Category.find(callback).limit(limit).sort([["title", "ascending"]])
  };
+
+//Add Categories
+module.exports.addCategory = (category, callback) =>{
+  Category.create(category, callback);
+};
