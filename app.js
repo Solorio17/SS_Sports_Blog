@@ -2,7 +2,12 @@ const express    = require("express"),
       bodyParser = require("body-parser"),
       path       = require("path"),
       session    = require("express-sessions"),
-      validator  = require("express-validator");
+      validator  = require("express-validator"),
+      mongoose   = require("mongoose");
+
+//Mongoose Connect
+mongoose.connect("mongodb://localhost/sportsblog")
+const db = mongoose.connection;
 
 //Setting App and Port
 const app  = express(),
