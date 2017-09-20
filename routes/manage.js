@@ -5,8 +5,18 @@ router.get("/articles", (req, res, next) => {
   res.render("manage_articles", {title: "Manage Articles"});
 });
 
+Category = require("../models/category.js")
+
 router.get("/categories", (req, res, next) => {
-  res.render("manage_categories", {title: "Manage Categories"});
+  Category.getCategories((err, categories) => {
+      if(err){
+        console.log(err);
+      }
+      res.render("manage_categories", {
+        title: "Categories",
+        categories: categories
+      });
+  })
 });
 
 router.get("/articles/add", (req, res, next) => {
