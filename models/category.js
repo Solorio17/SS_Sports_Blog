@@ -21,3 +21,18 @@ const Category = module.exports = mongoose.model('Category', categorySchema);
 module.exports.addCategory = (category, callback) =>{
   Category.create(category, callback);
 };
+
+//Get Single Category by ID
+module.exports.getCategoryById = (id, callback) => {
+  Category.findById(id, callback);
+};
+
+//Update Category
+module.exports.updateCategory = (query, update, options, callback) => {
+  Category.findOneAndUpdate(query, update, options, callback);
+};
+
+//Remove Category
+module.exports.removeCategory = (query, callback) => {
+  Category.remove(query, callback);
+};
